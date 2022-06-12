@@ -10,10 +10,9 @@ function Navbar() {
         <button className="btn-login">Login</button>
       </div>
       <div className="navbar-category">
-        <h1>
-          <Link to="/">ALPHALETE</Link>
-        </h1>
-
+        <Link to="/" className="navbar-title">
+          ALPHALETE
+        </Link>
         <div>
           <button className="btn-men">MEN</button>
           <button className="btn-women">WOMEN</button>

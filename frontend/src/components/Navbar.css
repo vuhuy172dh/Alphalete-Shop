@@ -7,6 +7,7 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   align-items: center;
+  transition: 2s;
 }
 
 .navbar-info-login {
@@ -14,13 +15,14 @@
   width: 95%;
   margin: 0 auto;
   border-bottom: 1px solid #d1d1d1;
-  height: 40px;
+  height: 25px;
   align-items: center;
 }
 
 .navbar-info-login p {
   margin-right: auto;
   font-size: 10px;
+  font-weight: 500;
 }
 
 .btn-info,
@@ -29,6 +31,7 @@
   background-color: transparent;
   height: 100%;
   font-weight: bold;
+  transition: all 0.3s ease 0.3s;
 }
 
 .navbar-category {
@@ -38,22 +41,35 @@
   height: fit-content;
   margin: 0 auto;
   align-items: center;
+  font-family: 'Archivo Black', sans-serif;
 }
 
-.navbar-category h1 {
+.navbar-title {
   font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
 }
 
 .btn-men,
 .btn-women {
   border: none;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 400;
   padding: 10px 10px;
   background: transparent;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .btn-info:hover,
 .btn-login:hover {
   cursor: pointer;
   border-bottom: 1px solid #000;
+  transition: all 0.3s ease 0.3s;
+}
+
+.btn-men:hover,
+.btn-women:hover {
+  border-bottom: 1px solid #000;
+  cursor: pointer;
 }
