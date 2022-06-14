@@ -6,32 +6,26 @@
   border: 1px solid #d1d1d1;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  align-items: center;
-  transition: 2s;
 }
 
 .navbar-info-login {
   display: flex;
-  width: 95%;
-  margin: 0 auto;
   border-bottom: 1px solid #d1d1d1;
-  height: 25px;
   align-items: center;
+  height: 30px;
+  justify-content: space-between;
+  margin: 0 30px;
 }
 
-.navbar-info-login p {
-  margin-right: auto;
-  font-size: 10px;
-  font-weight: 500;
-}
-
-.btn-info,
-.btn-login {
-  border: none;
-  background-color: transparent;
+.navbar-info-login ul {
+  list-style: none;
   height: 100%;
-  font-weight: bold;
-  transition: all 0.3s ease 0.3s;
+  display: flex;
+}
+
+.navbar-info-login li {
+  height: 100%;
+  padding-left: 8px;
 }
 
 .navbar-category {

@@ -1,22 +1,36 @@
 import './Navbar.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
     <div className="navbar-container">
       <div className="navbar-info-login">
-        <p>Free Domestic Shipping Over $150 and 30 Day return</p>
-        <button className="btn-info">Info</button>
-        <button className="btn-login">Login</button>
+        <Swiper modules={[Autoplay]} spaceBetween={100} autoplay={true}>
+          <SwiperSlide>
+            <p>Free Domestic Shipping Over $150 and 30 Day Returns</p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <p>Women's New Arrivals</p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <p>Men's New Arrivals</p>
+          </SwiperSlide>
+        </Swiper>
+        <ul>
+          <li>Info</li>
+          <li>Login</li>
+        </ul>
       </div>
       <div className="navbar-category">
         <Link to="/" className="navbar-title">
           ALPHALETE
         </Link>
-        <div>
-          <button className="btn-men">MEN</button>
-          <button className="btn-women">WOMEN</button>
-        </div>
+        <ul>
+          <li>MEN</li>
+          <li>WOMEN</li>
+        </ul>
         <div>
           <button>look</button>
           <button>cart</button>
