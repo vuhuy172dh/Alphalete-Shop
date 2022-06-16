@@ -24,8 +24,33 @@ function Navbar() {
           <ul className="nav-info-links-list">
             <li className="nav-info-links-item">
               <button className="info-btn">Info</button>
+              <ul className="info-links-container">
+                <li>
+                  <a href="https://support.alphaleteathletics.com/hc/en-us">
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a href="https://support.alphaleteathletics.com/hc/en-us/articles/360058520571-Return-exchange-policy">
+                    Returns
+                  </a>
+                </li>
+                <li>
+                  <a href="https://info.alphaleteathletics.com/pages/about-us">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="https://info.alphaleteathletics.com/pages/careers">
+                    Careers
+                  </a>
+                </li>
+                <li>
+                  <Link to="/policies/privacy-policy">Policy</Link>
+                </li>
+              </ul>
             </li>
-            <li className="nav-info-links-item">
+            <li className="nav-login-links-item">
               <Link to="/account/login" className="login-link">
                 Login
               </Link>
