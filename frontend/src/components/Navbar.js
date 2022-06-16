@@ -34,7 +34,41 @@ function Navbar() {
         </div>
       </div>
       <hr className="line" />
-      <div className="nav-main-container"></div>
+      <div className="nav-main-container">
+        <div className="nav-logo">
+          <Link to="/" className="nav-logo-wrapper">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0667/0133/files/rainbow-flag_1024x1024.png?v=11808118591447227889"
+              alt="rainbow-flag"
+            />
+            <p>ALPHALETE</p>
+          </Link>
+        </div>
+        <ul className="nav-links-wrapper">
+          <li>
+            <Link to="/collections/mens-new" className="men-link">
+              <span>MEN</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/collections/womens-new" className="women-link">
+              <span>WOMEN</span>
+            </Link>
+          </li>
+        </ul>
+        <ul className="nav-items-wrapper">
+          <li>
+            <button className="search-btn">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </li>
+          <li>
+            <button className="cart-btn">
+              <i className="fa-solid fa-cart-shopping"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }
