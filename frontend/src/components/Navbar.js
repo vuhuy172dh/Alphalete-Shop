@@ -2,8 +2,11 @@ import './Navbar.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Navbar() {
+  const [isShown, setIsShown] = useState(false);
+
   return (
     <nav className="nav-container">
       <div className="nav-top-container">
@@ -70,10 +73,15 @@ function Navbar() {
           </Link>
         </div>
         <ul className="nav-links-wrapper">
-          <li>
+          <li
+            className="men-links-wrapper"
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+          >
             <Link to="/collections/mens-new" className="men-link">
               <span>MEN</span>
             </Link>
+            <div className="men-component"></div>
           </li>
           <li>
             <Link to="/collections/womens-new" className="women-link">
@@ -94,6 +102,11 @@ function Navbar() {
           </li>
         </ul>
       </div>
+      <div
+        className={
+          isShown ? 'nav-expandable-component open' : 'nav-expandable-component'
+        }
+      ></div>
     </nav>
   );
 }

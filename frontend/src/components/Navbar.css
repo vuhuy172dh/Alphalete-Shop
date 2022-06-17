@@ -1,10 +1,10 @@
 .nav-container {
   display: flex;
   flex-flow: column;
-  position: relative;
+  position: fixed;
+  top: 0;
   width: calc(100% - 18rem);
-  margin-left: auto;
-  margin-right: auto;
+  right: 9rem;
   background-color: hsla(0, 0%, 5%, 0.8);
   border: 1px solid hsla(0, 0%, 96%, 0.2);
   border-bottom-left-radius: 2rem;
@@ -147,15 +147,14 @@
 .nav-links-wrapper {
   height: 100%;
   display: block;
-  position: relative;
   margin-left: auto;
+  padding: 0;
   list-style: none;
 }
 
 .nav-links-wrapper li {
   display: inline-block;
   height: 100%;
-  position: relative;
 }
 
 .men-link,
@@ -315,4 +314,17 @@
 .nav-info-links-item:hover .info-links-container {
   visibility: visible;
   opacity: 1;
+}
+
+.nav-expandable-component {
+  display: block;
+  height: 0;
+  width: 100%;
+  transition: height 0.5s ease;
+}
+
+.nav-expandable-component.open {
+  display: block;
+  height: 100px;
+  transition: height 0.5s ease;
 }
