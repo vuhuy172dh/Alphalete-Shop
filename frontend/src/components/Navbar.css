@@ -325,6 +325,33 @@
 
 .nav-expandable-component.open {
   display: block;
-  height: 100px;
+  height: 100%;
   transition: height 0.5s ease;
 }
+/* 
+.nav-inner-expandable-component {
+  display: flex;
+  height: 0px;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  background-color: red;
+  transition: height 0.5s ease;
+}
+
+.nav-expandable-component.open .nav-inner-expandable-component {
+  height: 100%;
+  transition: height 0.5s ease;
+}
+
+.links-wrapper {
+  list-style: none;
+  opacity: 0;
+  display: flex;
+  visibility: hidden;
+}
+
+.nav-expandable-component.open .links-wrapper {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease 0.3s;
+} */

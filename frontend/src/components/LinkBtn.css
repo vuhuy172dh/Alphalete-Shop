@@ -1,0 +1,28 @@
+.link-container {
+  width: fit-content;
+  display: block;
+  position: relative;
+}
+
+.link-wrapper {
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.link-wrapper::after {
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scale(0, 1);
+  transform-origin: 100% 100%;
+  transition: transform 0.3s ease;
+}
+
+.link-wrapper:hover::after {
+  transform: scale(1, 1);
+  transform-origin: 0 100%;
+}

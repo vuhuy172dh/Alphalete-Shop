@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import LinkBtn from './LinkBtn';
 
 function Navbar() {
   const [isShown, setIsShown] = useState(false);
@@ -106,7 +107,27 @@ function Navbar() {
         className={
           isShown ? 'nav-expandable-component open' : 'nav-expandable-component'
         }
-      ></div>
+      >
+        <div className="nav-inner-expandable-component">
+          <ul className="links-wrapper">
+            <li>
+              <h2 style={{ fontWeight: 800, fontSize: '1rem', color: '#fff' }}>
+                Tops
+              </h2>
+              <LinkBtn
+                link="/collections/mens-stringers"
+                color="#f5f5f5"
+                fontsize="0.8rem"
+                fontweight="400"
+              >
+                Stringers
+              </LinkBtn>
+            </li>
+            <li>Bottoms</li>
+          </ul>
+          <div></div>
+        </div>
+      </div>
     </nav>
   );
 }
