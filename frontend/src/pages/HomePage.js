@@ -3,9 +3,8 @@ import Navbar from '../components/Navbar';
 function HomePage() {
   return (
     <div>
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
+      <p>hello world</p>
     </div>
   );
 }
