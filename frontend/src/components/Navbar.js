@@ -35,6 +35,58 @@ function Navbar() {
                 <ul className="nav-info-links-container">
                   <li>
                     <button className="info-links-btn">Info</button>
+                    <ul className="info-links-container">
+                      <li>
+                        <LinkBtn
+                          link="/anotherweb/support"
+                          color="inherit"
+                          fontsize="0.7rem"
+                          fontweight="600"
+                        >
+                          Help Center
+                        </LinkBtn>
+                      </li>
+                      <li>
+                        <LinkBtn
+                          link="/anotherweb/support"
+                          color="inherit"
+                          fontsize="0.7rem"
+                          fontweight="600"
+                        >
+                          Returns
+                        </LinkBtn>
+                      </li>
+                      <li>
+                        <LinkBtn
+                          link="/anotherweb/about-us"
+                          color="inherit"
+                          fontsize="0.7rem"
+                          fontweight="600"
+                        >
+                          About us
+                        </LinkBtn>
+                      </li>
+                      <li>
+                        <LinkBtn
+                          link="/anotherweb/career"
+                          color="inherit"
+                          fontsize="0.7rem"
+                          fontweight="600"
+                        >
+                          Careers
+                        </LinkBtn>
+                      </li>
+                      <li>
+                        <LinkBtn
+                          link="/policies/privacy-policy"
+                          color="inherit"
+                          fontsize="0.7rem"
+                          fontweight="600"
+                        >
+                          Privacy Policy
+                        </LinkBtn>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <LinkBtn
