@@ -12,6 +12,8 @@ function LinkBtn(props) {
           fontSize: props.fontsize,
           paddingRight: props.padding ? props.padding : 0,
           paddingLeft: props.padding ? props.padding : 0,
+          paddingTop: props.paddingtop ? props.paddingtop : 0,
+          paddingBottom: props.paddingbottom ? props.paddingbottom : 0,
         }}
         className="link-wrapper"
       >
