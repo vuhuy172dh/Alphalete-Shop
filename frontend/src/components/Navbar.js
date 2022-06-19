@@ -85,13 +85,13 @@ function Navbar() {
                       <ul className="link-l1-nested-links-wrapper">
                         <li className="link-l2">
                           <h2 className="link-l2-title">
-                            <span>Featured</span>
+                            <span>Tops</span>
                           </h2>
                           <ul className="sublink-box"></ul>
                         </li>
                         <li className="link-l2">
                           <h2 className="link-l2-title">
-                            <span>Tops</span>
+                            <span>Bottoms</span>
                           </h2>
                           <ul className="sublink-box"></ul>
                         </li>
@@ -111,7 +111,20 @@ function Navbar() {
                   </LinkBtn>
                 </li>
               </ul>
+              <ul className="nav-items-wrapper">
+                <li className="nav-quick-search-item">
+                  <button className="nav-quick-search-item-btn">
+                    <i className="fa-solid fa-magnifying-glass" />
+                  </button>
+                </li>
+                <li className="nav-minicart">
+                  <button className="nav-minicart-btn">
+                    <i className="fa-solid fa-cart-shopping" />
+                  </button>
+                </li>
+              </ul>
             </div>
+
             <div
               className={
                 isShown

@@ -235,3 +235,39 @@
   font-weight: 600;
   font-size: 0.9rem;
 }
+
+.nav-items-wrapper {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+}
+
+.nav-items-wrapper li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-quick-search-item-btn,
+.nav-minicart-btn {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  line-height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-quick-search-item-btn:hover,
+.nav-minicart-btn:hover {
+  background-color: hsla(0, 0%, 96%, 0.2);
+}
