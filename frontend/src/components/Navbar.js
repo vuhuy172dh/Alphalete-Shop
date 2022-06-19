@@ -69,8 +69,8 @@ function Navbar() {
                 >
                   <LinkBtn
                     link="/collections/mens-new"
-                    fontweight="400"
-                    fontsize="1.2rem"
+                    fontweight="600"
+                    fontsize="1rem"
                     color="inherit"
                     padding="5px"
                   >
@@ -102,8 +102,8 @@ function Navbar() {
                 <li>
                   <LinkBtn
                     link="/collections/mens-new"
-                    fontweight="400"
-                    fontsize="1.2rem"
+                    fontweight="600"
+                    fontsize="1rem"
                     color="inherit"
                     padding="5px"
                   >

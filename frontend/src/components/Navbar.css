@@ -1,12 +1,12 @@
 .section-navbar {
   width: 100%;
-  margin-bottom: calc(80px + 3rem);
+  margin-bottom: calc(50px + 3rem);
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: column;
   position: relative;
   z-index: 10;
-  align-items: center;
 }
 
 /* when navbar active, (stretch out). nav-backdrop will active to blur background around navbar */
@@ -69,9 +69,6 @@
   color: hsla(0, 0%, 96%, 0.8);
   font-size: 0.8rem;
   font-weight: 600;
-  /* display: flex;
-  align-items: center;
-  justify-content: flex-start; */
   line-height: 100%;
 }
 
@@ -79,7 +76,6 @@
   list-style: none;
   margin: 0;
   padding-right: 3rem;
-  /* height: 3rem; */
   height: 100%;
   margin-left: auto;
   display: flex;
@@ -202,16 +198,17 @@
 .nav-links-wrapper li:first-child:hover .link-l1-container {
   opacity: 1;
   visibility: visible;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) 0.12s;
 }
 
 .link-l1-inner-container {
   width: 100%;
   display: grid;
-  transform: translate(0, 3rem);
-  transition: transform 0.7s cubic-bezier(0, 0.4, 0, 1.02) 0.15s;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
-  padding-top: 3rem;
+  padding-top: 0.8rem;
+  transform: translate(0, 3rem);
+  transition: transform 0.7s cubic-bezier(0, 0.4, 0, 1.02) 0.12s;
   border-top: 1px solid hsla(0, 0%, 96%, 0.2);
 }
 
@@ -227,7 +224,7 @@
   padding: 0;
 }
 
-.link-l2 {
+.link-l2:last-child {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
@@ -235,6 +232,6 @@
 }
 
 .link-l2-title {
-  font-weight: 800;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
