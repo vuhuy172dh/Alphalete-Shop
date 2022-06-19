@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <header>
       <section className="section-navbar">
-        <div className="nav-backdrop"></div>
+        <div className={isShown ? 'nav-backdrop open' : 'nav-backdrop'}></div>
         <nav className="nav">
           <div className="nav-inner">
             <div className="nav-top-container">
