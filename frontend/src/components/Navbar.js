@@ -44,7 +44,6 @@ function Navbar() {
                       color="#f5f5f5"
                       className="login-links-btn"
                     >
-                      {' '}
                       Login
                     </LinkBtn>
                   </li>
