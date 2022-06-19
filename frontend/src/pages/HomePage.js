@@ -1,10 +1,16 @@
 import Navbar from '../components/Navbar';
+import SlideShow from '../components/SlideShow';
 
 function HomePage() {
   return (
     <div>
-      <Navbar />
-      <p>hello world</p>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <SlideShow />
+        <p>hello world</p>
+      </main>
     </div>
   );
 }
