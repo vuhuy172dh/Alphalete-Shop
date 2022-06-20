@@ -7,12 +7,22 @@
   margin: 0 auto;
   position: relative;
   max-width: 1234px;
+  border-radius: 3rem;
+  overflow: hidden;
+  padding: 10px;
 }
 
 .slideshow-container .swiper {
   background-color: #0d0d0d;
   border-radius: 3rem;
-  overflow: hidden;
+  transform: translateZ(0);
+  opacity: 0.8;
+  transition: all 1s cubic-bezier(0, 0.51, 0.25, 1);
+}
+
+.slideshow-container .swiper:hover {
+  opacity: 1;
+  transform: perspective(500px) translateZ(15px);
 }
 
 .slideshow-container .swiper-wrapper {
@@ -38,7 +48,6 @@
   /* position: absolute;
   top: 0;
   left: 0; */
-  transform: translateZ(0);
 }
 
 .title-media-container video {
