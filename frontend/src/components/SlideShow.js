@@ -17,7 +17,7 @@ function SlideShow() {
             }}
             className="mySwiper"
           >
-            <SwiperSlide style={{ width: '940px' }}>
+            <SwiperSlide>
               <div className="title">
                 <div className="title-media-container">
                   <video
@@ -51,7 +51,7 @@ function SlideShow() {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ width: '940px' }}>
+            <SwiperSlide>
               <div className="title">
                 <div className="title-media-container">
                   <img
@@ -81,7 +81,7 @@ function SlideShow() {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ width: '940px' }}>
+            <SwiperSlide>
               <div className="title">
                 <div className="title-media-container">
                   <img
