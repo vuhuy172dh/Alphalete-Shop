@@ -39,10 +39,11 @@
   background-color: hsla(0, 0%, 5%, 0.8);
   border: 1px solid hsla(0, 0%, 96%, 0.2);
   backdrop-filter: saturate(180%) blur(2px);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav:past {
-  transform: translateY(2rem);
+.nav.past-top {
+  transform: translateY(-2rem);
 }
 
 .nav-inner {

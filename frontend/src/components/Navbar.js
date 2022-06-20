@@ -4,14 +4,17 @@ import { Autoplay } from 'swiper';
 import LinkBtn from './LinkBtn';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import useScrollPosition from '../hooks/useScrollPosition.js';
 
 function Navbar() {
   const [isShown, setIsShown] = useState(false);
+  const scrollPosition = useScrollPosition();
+  console.log(scrollPosition);
 
   return (
     <section className="section-navbar">
       <div className={isShown ? 'nav-backdrop open' : 'nav-backdrop'}></div>
-      <nav className="nav">
+      <nav className={scrollPosition !== 0 ? 'nav past-top' : 'nav'}>
         <div className="nav-inner">
           <div className="nav-top-container">
             <div className="nav-top-wrapper">

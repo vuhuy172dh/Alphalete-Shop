@@ -11,7 +11,7 @@ function SlideShow() {
           <Swiper
             modules={[Autoplay, Pagination]}
             style={{ cursor: 'grab' }}
-            autoplay={{ delay: 15000 }}
+            autoplay={{ delay: 15000, disableOnInteraction: false }}
             pagination={{
               type: 'bullets',
             }}
