@@ -1,15 +1,15 @@
-import './Navbar.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper';
-import LinkBtn from './LinkBtn';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import useScrollPosition from '../hooks/useScrollPosition.js';
+import './Navbar.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper'
+import LinkBtn from './LinkBtn'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import useScrollPosition from '../hooks/useScrollPosition.js'
 
 function Navbar() {
-  const [isShown, setIsShown] = useState(false);
-  const scrollPosition = useScrollPosition();
-  console.log(scrollPosition);
+  const [isShown, setIsShown] = useState(false)
+  const scrollPosition = useScrollPosition()
+  console.log(scrollPosition)
 
   return (
     <section className="section-navbar">
@@ -444,7 +444,7 @@ function Navbar() {
         </div>
       </nav>
     </section>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar

@@ -1,11 +1,11 @@
-import SlideShow from '../components/SlideShow';
+import SlideShow from '../components/SlideShow'
 
 function HomePage() {
   return (
     <div>
       <SlideShow />
     </div>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

@@ -1,7 +1,7 @@
-import './SlideShow.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay } from 'swiper';
-import { Link } from 'react-router-dom';
+import './SlideShow.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay } from 'swiper'
+import { Link } from 'react-router-dom'
 
 function SlideShow() {
   return (
@@ -13,7 +13,7 @@ function SlideShow() {
             style={{ cursor: 'grab' }}
             autoplay={{ delay: 15000, disableOnInteraction: false }}
             pagination={{
-              type: 'bullets',
+              type: 'bullets'
             }}
             className="mySwiper"
           >
@@ -115,7 +115,7 @@ function SlideShow() {
         </div>
       </section>
     </section>
-  );
+  )
 }
 
-export default SlideShow;
+export default SlideShow

@@ -1,7 +1,8 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import Navbar from './components/Navbar';
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -14,8 +15,11 @@ function App() {
           <Route path="/" element={<HomePage />} />
         </Routes>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
