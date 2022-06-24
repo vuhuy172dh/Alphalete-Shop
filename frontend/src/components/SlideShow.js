@@ -1,4 +1,5 @@
-import './SlideShow.css'
+import style from './SlideShow.module.css'
+import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper'
 import { Link } from 'react-router-dom'
@@ -6,8 +7,8 @@ import { Link } from 'react-router-dom'
 function SlideShow() {
   return (
     <section>
-      <section className="section-slideshow">
-        <div className="slideshow-container">
+      <section className={style.section_slideshow}>
+        <div className={style.slideshow_container}>
           <Swiper
             modules={[Autoplay, Pagination]}
             style={{ cursor: 'grab' }}
@@ -15,11 +16,12 @@ function SlideShow() {
             pagination={{
               type: 'bullets'
             }}
-            className="mySwiper"
+            wrapperTag="div"
+            className={style.swiper}
           >
-            <SwiperSlide>
-              <div className="title">
-                <div className="title-media-container">
+            <SwiperSlide className={style['swiper-slide']}>
+              <div className={style.title}>
+                <div className={style.title_media_container}>
                   <video
                     src="https://cdn.shopify.com/s/files/1/0667/0133/files/cg-motivational-land.mp4?v=1654931634"
                     autoPlay={true}
@@ -29,21 +31,21 @@ function SlideShow() {
                     playsInline={true}
                   ></video>
                 </div>
-                <div className="cta">
-                  <h2 className="cta-title">MEN'S</h2>
-                  <p className="cta-desc">
+                <div className={style.cta}>
+                  <h2 className={style.cta_title}>MEN'S</h2>
+                  <p className={style.cta_desc}>
                     The next generation of Alphalete sportswear
                   </p>
-                  <div className="cta-btn-container">
+                  <div className={style.cta_btn_container}>
                     <Link
                       to="/collections/mens-all-tops"
-                      className="cta-btn-link"
+                      className={style.cta_btn_link}
                     >
                       <span>ALL TOPS</span>
                     </Link>
                     <Link
                       to="/collections/mens-all-bottoms"
-                      className="cta-btn-link"
+                      className={style.cta_btn_link}
                     >
                       <span>ALL BOTTOMS</span>
                     </Link>
@@ -51,29 +53,29 @@ function SlideShow() {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div className="title">
-                <div className="title-media-container">
+            <SwiperSlide className={style['swiper-slide']}>
+              <div className={style.title}>
+                <div className={style.title_media_container}>
                   <img
                     src="https://cdn.shopify.com/s/files/1/0667/0133/files/pride-btob-land.jpg?crop=center&v=1654081765&width=1400"
                     alt="Our favorites"
                   />
                 </div>
-                <div className="cta">
-                  <h2 className="cta-title">MEN'S</h2>
-                  <p className="cta-desc">
+                <div className={style.cta}>
+                  <h2 className={style.cta_title}>MEN'S</h2>
+                  <p className={style.cta_desc}>
                     The next generation of Alphalete sportswear
                   </p>
-                  <div className="cta-btn-container">
+                  <div className={style.cta_btn_container}>
                     <Link
                       to="/collections/mens-all-tops"
-                      className="cta-btn-link"
+                      className={style.cta_btn_link}
                     >
                       <span>ALL TOPS</span>
                     </Link>
                     <Link
                       to="/collections/mens-all-bottoms"
-                      className="cta-btn-link"
+                      className={style.cta_btn_link}
                     >
                       <span>ALL BOTTOMS</span>
                     </Link>
@@ -81,29 +83,29 @@ function SlideShow() {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              <div className="title">
-                <div className="title-media-container">
+            <SwiperSlide className={style['swiper-slide']}>
+              <div className={style.title}>
+                <div className={style.title_media_container}>
                   <img
                     src="https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyJune_01-land.jpg?crop=center&v=1654927397&width=1400"
                     alt="Our favorites"
                   />
                 </div>
-                <div className="cta">
-                  <h2 className="cta-title">MEN'S</h2>
-                  <p className="cta-desc">
+                <div className={style.cta}>
+                  <h2 className={style.cta_title}>MEN'S</h2>
+                  <p className={style.cta_desc}>
                     The next generation of Alphalete sportswear
                   </p>
-                  <div className="cta-btn-container">
+                  <div className={style.cta_btn_container}>
                     <Link
                       to="/collections/mens-all-tops"
-                      className="cta-btn-link"
+                      className={style.cta_btn_link}
                     >
                       <span>ALL TOPS</span>
                     </Link>
                     <Link
                       to="/collections/mens-all-bottoms"
-                      className="cta-btn-link"
+                      className={style.cta_btn_link}
                     >
                       <span>ALL BOTTOMS</span>
                     </Link>

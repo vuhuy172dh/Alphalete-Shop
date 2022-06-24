@@ -1,0 +1,9 @@
+.footer_l1_container {
+  width: 100%;
+  padding: 10rem 5rem;
+}
+
+.footer_links_social_container {
+  width: 100%;
+  display: flex;
+}

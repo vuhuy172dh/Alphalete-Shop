@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import './LinkBtn.css'
+import style from './LinkBtn.module.css'
 
 function LinkBtn(props) {
   return (
-    <div className="link-container">
+    <div className={style.link_container}>
       <Link
         to={props.link}
         style={{
@@ -15,7 +15,7 @@ function LinkBtn(props) {
           paddingTop: props.paddingtop ? props.paddingtop : 0,
           paddingBottom: props.paddingbottom ? props.paddingbottom : 0
         }}
-        className="link-wrapper"
+        className={style.link_wrapper}
       >
         {props.children}
       </Link>

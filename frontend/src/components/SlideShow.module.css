@@ -1,9 +1,9 @@
-.section-slideshow {
+.section_slideshow {
   display: block;
   padding: 1.5rem 5rem;
 }
 
-.slideshow-container {
+.slideshow_container {
   margin: 0 auto;
   position: relative;
   max-width: 1234px;
@@ -14,12 +14,12 @@
   transition: all 1s cubic-bezier(0, 0.51, 0.25, 1);
 }
 
-.slideshow-container:hover {
+.slideshow_container:hover {
   opacity: 1;
   transform: perspective(500px) translateZ(10px);
 }
 
-.slideshow-container .swiper {
+.slideshow_container .swiper {
   background-color: #0d0d0d;
   overflow: hidden;
   height: 100%;
@@ -27,13 +27,16 @@
   padding-top: 56.25%;
 }
 
-.slideshow-container .swiper .swiper-wrapper {
+/* Using slideshow.css, can call directly .slideshow_container .swiper .swiper-wrapper (right click on web, select inspect to 
+see why .swiper-wrapper) */
+/* Using slideshow.module.css, it can't call like above, so I call first div tag to override "default .swiper-wrapper" (second div tag is swiper-pagination) */
+.slideshow_container .swiper > div:first-child {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.slideshow-container .swiper .swiper-wrapper .swiper-slide {
+.swiper-slide {
   background-color: hsla(0, 0, 5%, 1);
 }
 
@@ -42,7 +45,7 @@
   width: 100%;
 }
 
-.title-media-container {
+.title_media_container {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -51,7 +54,7 @@
   overflow: hidden;
 }
 
-.title-media-container video {
+.title_media_container video {
   max-width: 100%;
   object-fit: cover;
   display: block;
@@ -60,7 +63,7 @@
   opacity: 1;
 }
 
-.title-media-container img {
+.title_media_container img {
   max-width: 100%;
   object-fit: cover;
   opacity: 1;
@@ -77,27 +80,27 @@
   z-index: 2;
 }
 
-.cta-title {
+.cta_title {
   font-size: 2.2rem;
   line-height: normal;
   max-width: 40rem;
   margin: 0;
 }
 
-.cta-desc {
+.cta_desc {
   font-weight: 500;
   font-size: 1rem;
   margin-top: 5px;
 }
 
-.cta-btn-container {
+.cta_btn_container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
 
-.cta-btn-link {
+.cta_btn_link {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
@@ -110,13 +113,13 @@
   transition: all 0.2s ease-out;
 }
 
-.cta-btn-link:hover {
+.cta_btn_link:hover {
   background-color: rgba(255, 255, 255, 0.8);
   transform: translateY(-10%);
   color: #000;
 }
 
-.swiper-pagination {
+.slideshow_container .swiper > div:last-child {
   width: 100%;
   display: flex;
   justify-content: center;

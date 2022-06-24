@@ -1,4 +1,4 @@
-import './Navbar.css'
+import style from './Navbar.module.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper'
 import LinkBtn from './LinkBtn'
@@ -12,32 +12,34 @@ function Navbar() {
   console.log(scrollPosition)
 
   return (
-    <section className="section-navbar">
-      <div className={isShown ? 'nav-backdrop open' : 'nav-backdrop'}></div>
-      <nav className={scrollPosition !== 0 ? 'nav past-top' : 'nav'}>
-        <div className="nav-inner">
-          <div className="nav-top-container">
-            <div className="nav-top-wrapper">
-              <div className="nav-announcement-bar-container">
+    <section className={style.section_navbar}>
+      <div
+        className={isShown ? style.nav_backdrop_open : style.nav_backdrop}
+      ></div>
+      <nav className={scrollPosition !== 0 ? style['nav_past_top'] : style.nav}>
+        <div className={style.nav_inner}>
+          <div className={style.nav_top_container}>
+            <div className={style.nav_top_wrapper}>
+              <div className={style.nav_announcement_bar_container}>
                 <Swiper
                   modules={[Autoplay]}
                   autoplay={{ delay: 3000, disableOnInteraction: false }}
                 >
-                  <SwiperSlide className="nav-announce-slide">
+                  <SwiperSlide className={style.nav_announce_slide}>
                     <p>Free Domestic Shipping Over $150 and 30 Day Returns</p>
                   </SwiperSlide>
-                  <SwiperSlide className="nav-announce-slide">
+                  <SwiperSlide className={style.nav_announce_slide}>
                     <p>Shop Men's New Arrivals</p>
                   </SwiperSlide>
-                  <SwiperSlide className="nav-announce-slide">
+                  <SwiperSlide className={style.nav_announce_slide}>
                     <p>Shop Women's New Arrivals</p>
                   </SwiperSlide>
                 </Swiper>
               </div>
-              <ul className="nav-info-links-container">
+              <ul className={style.nav_info_links_container}>
                 <li>
-                  <button className="info-links-btn">Info</button>
-                  <ul className="info-links-container">
+                  <button className={style.info_links_btn}>Info</button>
+                  <ul className={style.info_links_container}>
                     <li>
                       <LinkBtn
                         link="/anotherweb/support"
@@ -102,12 +104,12 @@ function Navbar() {
                   </LinkBtn>
                 </li>
               </ul>
-              <div className="line"></div>
+              <div className={style.line}></div>
             </div>
           </div>
-          <div className="nav-main-container">
-            <div className="nav-logo">
-              <Link to="/" className="logo-img-wrapper">
+          <div className={style.nav_main_container}>
+            <div className={style.nav_logo}>
+              <Link to="/" className={style.logo_img_wrapper}>
                 <p>ALPHALETE</p>
                 <img
                   src="//cdn.shopify.com/s/files/1/0667/0133/files/rainbow-flag_1024x1024.png?v=11808118591447227889"
@@ -115,9 +117,9 @@ function Navbar() {
                 />
               </Link>
             </div>
-            <ul className="nav-links-wrapper">
+            <ul className={style.nav_links_wrapper}>
               <li
-                className="link-l1"
+                className={style.link_l1}
                 onMouseEnter={() => setIsShown(true)}
                 onMouseLeave={() => setIsShown(false)}
               >
@@ -131,17 +133,17 @@ function Navbar() {
                   <span>MEN</span>
                 </LinkBtn>
                 <div
-                  className="link-l1-container"
+                  className={style.link_l1_container}
                   onMouseEnter={() => setIsShown(true)}
                   onMouseLeave={() => setIsShown(false)}
                 >
-                  <div className="link-l1-inner-container">
-                    <ul className="link-l1-nested-links-wrapper">
-                      <li className="link-l2">
-                        <h2 className="link-l2-title">
+                  <div className={style.link_l1_inner_container}>
+                    <ul className={style.link_l1_nested_links_wrapper}>
+                      <li className={style.link_l2}>
+                        <h2 className={style.link_l2_title}>
                           <span>Tops</span>
                         </h2>
-                        <ul className="sublink-box">
+                        <ul className={style.sublink_box}>
                           <li>
                             <LinkBtn
                               link="/collections/mens-stringers"
@@ -196,11 +198,11 @@ function Navbar() {
                           </li>
                         </ul>
                       </li>
-                      <li className="link-l2">
-                        <h2 className="link-l2-title">
+                      <li className={style.link_l2}>
+                        <h2 className={style.link_l2_title}>
                           <span>Bottoms</span>
                         </h2>
-                        <ul className="sublink-box">
+                        <ul className={style.sublink_box}>
                           <li>
                             <LinkBtn
                               link="/collections/mens-shorts"
@@ -256,7 +258,7 @@ function Navbar() {
                 </div>
               </li>
               <li
-                className="link-l1"
+                className={style.link_l1}
                 onMouseEnter={() => setIsShown(true)}
                 onMouseLeave={() => setIsShown(false)}
               >
@@ -270,17 +272,17 @@ function Navbar() {
                   <span>WOMEN</span>
                 </LinkBtn>
                 <div
-                  className="link-l1-container"
+                  className={style.link_l1_container}
                   onMouseEnter={() => setIsShown(true)}
                   onMouseLeave={() => setIsShown(false)}
                 >
-                  <div className="link-l1-inner-container">
-                    <ul className="link-l1-nested-links-wrapper">
-                      <li className="link-l2">
-                        <h2 className="link-l2-title">
+                  <div className={style.link_l1_inner_container}>
+                    <ul className={style.link_l1_nested_links_wrapper}>
+                      <li className={style.link_l2}>
+                        <h2 className={style.link_l2_title}>
                           <span>Tops</span>
                         </h2>
-                        <ul className="sublink-box">
+                        <ul className={style.sublink_box}>
                           <li>
                             <LinkBtn
                               link="/collections/womens-sports-bras"
@@ -347,11 +349,11 @@ function Navbar() {
                           </li>
                         </ul>
                       </li>
-                      <li className="link-l2">
-                        <h2 className="link-l2-title">
+                      <li className={style.link_l2}>
+                        <h2 className={style.link_l2_title}>
                           <span>Bottoms</span>
                         </h2>
-                        <ul className="sublink-box">
+                        <ul className={style.sublink_box}>
                           <li>
                             <LinkBtn
                               link="/collections/womens-shorts"
@@ -421,14 +423,14 @@ function Navbar() {
                 </div>
               </li>
             </ul>
-            <ul className="nav-items-wrapper">
-              <li className="nav-quick-search-item">
-                <button className="nav-quick-search-item-btn">
+            <ul className={style.nav_items_wrapper}>
+              <li className={style.nav_quick_search_item}>
+                <button className={style.nav_quick_search_item_btn}>
                   <i className="fa-solid fa-magnifying-glass" />
                 </button>
               </li>
-              <li className="nav-minicart">
-                <button className="nav-minicart-btn">
+              <li className={style.nav_minicart}>
+                <button className={style.nav_minicart_btn}>
                   <i className="fa-solid fa-cart-shopping" />
                 </button>
               </li>
@@ -437,8 +439,8 @@ function Navbar() {
           <div
             className={
               isShown
-                ? 'nav-expandable-component open'
-                : 'nav-expandable-component'
+                ? style.nav_expandable_component_open
+                : style.nav_expandable_component
             }
           ></div>
         </div>
