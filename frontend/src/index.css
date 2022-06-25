@@ -1,14 +1,33 @@
+:root {
+  --color_primary: hsl(0, 0%, 5%);
+  --color_primary_80: hsla(0, 0%, 5%, 0.8);
+  --color_secondary: hsl(0, 0%, 96%);
+  --color_secondary_20: hsla(0, 0%, 96%, 0.2);
+  --color_secondary_50: hsla(0, 0%, 96%, 0.5);
+  --color_secondary_80: hsla(0, 0%, 96%, 0.8);
+}
+
+[data-theme='light'] {
+  --color_primary: hsl(0, 0%, 100%);
+  --color_primary_80: hsla(0, 0%, 100%, 0.8);
+  --color_secondary: hsl(0, 0%, 5%);
+  --color_secondary_20: hsla(0, 0%, 5%, 0.2);
+  --color_secondary_50: hsla(0, 0%, 5%, 0.5);
+  --color_secondary_80: hsla(0, 0%, 5%, 0.8);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: #1a1a1a;
-  color: #f5f5f5;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  background-color: var(--color_primary);
+  color: var(--color_secondary);
 }

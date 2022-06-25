@@ -44,6 +44,7 @@ function Navbar() {
                       <LinkBtn
                         link="/anotherweb/support"
                         color="inherit"
+                        opacity="0.7"
                         fontsize="0.7rem"
                         fontweight="600"
                       >
@@ -54,6 +55,7 @@ function Navbar() {
                       <LinkBtn
                         link="/anotherweb/support"
                         color="inherit"
+                        opacity="0.7"
                         fontsize="0.7rem"
                         fontweight="600"
                       >
@@ -64,6 +66,7 @@ function Navbar() {
                       <LinkBtn
                         link="/anotherweb/about-us"
                         color="inherit"
+                        opacity="0.7"
                         fontsize="0.7rem"
                         fontweight="600"
                       >
@@ -74,6 +77,7 @@ function Navbar() {
                       <LinkBtn
                         link="/anotherweb/career"
                         color="inherit"
+                        opacity="0.7"
                         fontsize="0.7rem"
                         fontweight="600"
                       >
@@ -84,6 +88,7 @@ function Navbar() {
                       <LinkBtn
                         link="/policies/privacy-policy"
                         color="inherit"
+                        opacity="0.7"
                         fontsize="0.7rem"
                         fontweight="600"
                       >
@@ -97,7 +102,7 @@ function Navbar() {
                     link="/account/login"
                     fontsize="0.8rem"
                     fontweight="600"
-                    color="#f5f5f5"
+                    color="inherit"
                     className="login-links-btn"
                   >
                     Login
@@ -147,7 +152,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-stringers"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -159,7 +165,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-tanks"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -171,7 +178,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-shirts-tops"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -185,7 +193,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-jackets-hoodies"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -206,7 +215,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-shorts"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -218,7 +228,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-joggers"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -230,7 +241,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-boardshorts"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -242,7 +254,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/mens-base-layers"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -286,7 +299,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-sports-bras"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -298,7 +312,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-tank-tops"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -310,7 +325,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-shirts-crops"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -324,7 +340,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-long-sleeves"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -336,7 +353,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-jackets-hoodies"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -357,7 +375,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-shorts"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -369,7 +388,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-leggings"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -381,7 +401,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-joggers"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -393,7 +414,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-dresses-skirts"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"
@@ -407,7 +429,8 @@ function Navbar() {
                           <li>
                             <LinkBtn
                               link="/collections/womens-underwear"
-                              color="#f5f5f5"
+                              color="inherit"
+                              opacity="0.7"
                               fontweight="600"
                               fontsize="0.8rem"
                               paddingtop="2px"

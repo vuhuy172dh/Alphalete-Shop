@@ -1,7 +1,14 @@
+import { useContext } from 'react'
+import { ThemeContext } from '../theme/themes'
 import style from './Footer.module.css'
 import LinkBtn from './LinkBtn'
 
 function Footer() {
+  const { setTheme } = useContext(ThemeContext)
+  const handleTheme = () => {
+    setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+  }
+
   return (
     <div className={style.footer_container}>
       <div className={style.footer_links_social_container}>
@@ -13,7 +20,8 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 HELP CENTER
               </LinkBtn>
@@ -23,7 +31,8 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 CONTACT US
               </LinkBtn>
@@ -33,7 +42,8 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 SHIPPING INFO
               </LinkBtn>
@@ -43,7 +53,8 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 RETURNS & EXCHANGES
               </LinkBtn>
@@ -58,7 +69,8 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 ABOUT US
               </LinkBtn>
@@ -68,7 +80,8 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 ALPHALAND
               </LinkBtn>
@@ -78,7 +91,8 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 SUMMER SHREDDING
               </LinkBtn>
@@ -88,12 +102,14 @@ function Footer() {
                 link="/help-center"
                 fontweight="700"
                 fontsize="0.8rem"
-                color="#d5d5d5"
+                color="inherit"
+                opacity="0.7"
               >
                 CAREERS
               </LinkBtn>
             </li>
           </ul>
+          <button onClick={handleTheme}>dark mode</button>
         </ul>
       </div>
       <div className="footer-info"></div>

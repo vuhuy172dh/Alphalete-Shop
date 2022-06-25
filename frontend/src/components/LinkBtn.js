@@ -9,6 +9,7 @@ function LinkBtn(props) {
         style={{
           fontWeight: props.fontweight,
           color: props.color,
+          opacity: props.opacity,
           fontSize: props.fontsize,
           paddingRight: props.padding ? props.padding : 0,
           paddingLeft: props.padding ? props.padding : 0,

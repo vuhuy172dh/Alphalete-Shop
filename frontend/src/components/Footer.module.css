@@ -17,6 +17,10 @@
   padding: 0 1rem;
 }
 
+.link_l1_container h4 {
+  color: var(--color_secondary);
+}
+
 .sublink_box {
   list-style: none;
   margin: 0;

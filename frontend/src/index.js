@@ -5,10 +5,13 @@ import App from './App'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { BrowserRouter } from 'react-router-dom'
+import { ThemeProvider } from './theme/themes.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </BrowserRouter>
 )

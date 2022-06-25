@@ -20,7 +20,7 @@
 }
 
 .slideshow_container .swiper {
-  background-color: #0d0d0d;
+  background-color: var(--color_primary);
   overflow: hidden;
   height: 100%;
   border-radius: 3rem;
@@ -37,7 +37,7 @@ see why .swiper-wrapper) */
 }
 
 .swiper-slide {
-  background-color: hsla(0, 0, 5%, 1);
+  background-color: var(--color_primary);
 }
 
 .title {
@@ -105,8 +105,8 @@ see why .swiper-wrapper) */
   font-size: 1.2rem;
   font-weight: 700;
   padding: 9px 18px;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
+  background-color: var(--color_secondary_50);
+  color: var(--color_secondary);
   margin-top: 10px;
   border-radius: 6rem;
   backdrop-filter: blur(1rem);
@@ -114,9 +114,9 @@ see why .swiper-wrapper) */
 }
 
 .cta_btn_link:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color_secondary_80);
   transform: translateY(-10%);
-  color: #000;
+  color: var(--color_primary);
 }
 
 .slideshow_container .swiper > div:last-child {
