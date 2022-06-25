@@ -1,9 +1,28 @@
-.footer_l1_container {
+.footer_container {
   width: 100%;
-  padding: 10rem 5rem;
+  padding: 5rem 5rem;
 }
 
 .footer_links_social_container {
-  width: 100%;
   display: flex;
+  width: 100%;
+}
+
+.link_l1_container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.sublink_box {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sublink_box > li {
+  padding: 5px 0;
 }
