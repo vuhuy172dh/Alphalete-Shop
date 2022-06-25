@@ -4,6 +4,7 @@
   --color_secondary: hsl(0, 0%, 96%);
   --color_secondary_20: hsla(0, 0%, 96%, 0.2);
   --color_secondary_50: hsla(0, 0%, 96%, 0.5);
+  --color_secondary_40: hsla(0, 0%, 96%, 0.4);
   --color_secondary_80: hsla(0, 0%, 96%, 0.8);
 }
 
@@ -13,6 +14,7 @@
   --color_secondary: hsl(0, 0%, 5%);
   --color_secondary_20: hsla(0, 0%, 5%, 0.2);
   --color_secondary_50: hsla(0, 0%, 5%, 0.5);
+  --color_secondary_40: hsla(0, 0%, 5%, 0.4);
   --color_secondary_80: hsla(0, 0%, 5%, 0.8);
 }
 

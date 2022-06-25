@@ -4,7 +4,7 @@ import style from './Footer.module.css'
 import LinkBtn from './LinkBtn'
 
 function Footer() {
-  const { setTheme } = useContext(ThemeContext)
+  const { theme, setTheme } = useContext(ThemeContext)
   const handleTheme = () => {
     setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
   }
@@ -109,8 +109,44 @@ function Footer() {
               </LinkBtn>
             </li>
           </ul>
-          <button onClick={handleTheme}>dark mode</button>
         </ul>
+        <div className={style.newsletter_social_container}>
+          <h3>SIGN UP FOR ALPHALETE NEWSLETTER</h3>
+          <form className={style.footer_newsletter}>
+            <input type="email" placeholder="Your Email Address" required />
+            <button>
+              <span>SIGN UP</span>
+            </button>
+          </form>
+          <ul className={style.social_media_container}>
+            <li className={style.social_media}>
+              <i className="fa-brands fa-instagram" />
+            </li>
+            <li className={style.social_media}>
+              <i className="fa-brands fa-tiktok" />
+            </li>
+            <li className={style.social_media}>
+              <i className="fa-brands fa-twitter" />
+            </li>
+            <li className={style.social_media}>
+              <i className="fa-brands fa-facebook-f" />
+            </li>
+            <li className={style.social_media}>
+              <i className="fa-brands fa-youtube" />
+            </li>
+            <li>
+              <button onClick={handleTheme} className={style.darkmode_btn}>
+                <i
+                  className={
+                    theme === 'dark'
+                      ? 'fa-solid fa-toggle-off'
+                      : 'fa-solid fa-toggle-on'
+                  }
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="footer-info"></div>
     </div>
