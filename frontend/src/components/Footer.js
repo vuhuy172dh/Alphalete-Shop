@@ -148,7 +148,12 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footer-info"></div>
+      <div className={style.footer_info}>
+        <span>
+          &copy; 2022 | Alphalete Athletics LLC | All Rights Reserved{' '}
+        </span>
+        <small>LEARN MORE | DREAM MORE | BE MORE</small>
+      </div>
     </div>
   )
 }
