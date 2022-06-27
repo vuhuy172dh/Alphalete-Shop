@@ -1,7 +1,11 @@
 import LinkBtn from './LinkBtn'
 import style from './ProductsCarousel.module.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import ProductCard from './ProductCard'
+import data from '../data'
 
 function ProductsCarousel() {
+  const { products } = data
   return (
     <section>
       <div className={style.products_carousel_container}>
@@ -37,7 +41,15 @@ function ProductsCarousel() {
             </div>
             <button>SHOP SEAMLESS</button>
           </div>
-          <div className={style.products_carousel_wrapper}></div>
+          <div className={style.products_carousel_wrapper}>
+            <Swiper spaceBetween={50} >
+              {products.map((product) => (
+                <SwiperSlide className={style['swiper-slide']}>
+                  <ProductCard image={product.image} name={product.name} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>

@@ -29,3 +29,13 @@
 .products_carousel_header button:hover {
   opacity: 1;
 }
+
+.products_carousel_wrapper {
+  padding-top: 1rem;
+}
+
+.swiper-slide {
+  width: 60vw;
+  max-width: 20rem;
+  margin-right: 20px;
+}

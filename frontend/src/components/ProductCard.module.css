@@ -1,0 +1,17 @@
+.product_card {
+  display: flex;
+  flex-flow: column;
+}
+
+.top_container {
+  position: relative;
+  padding-top: 133%;
+  overflow: hidden;
+}
+
+.top_container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
