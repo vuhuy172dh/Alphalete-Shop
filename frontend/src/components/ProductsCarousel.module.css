@@ -1,13 +1,14 @@
 .products_carousel_container {
   display: block;
   margin: 0;
-  padding: 2rem 6rem;
+  padding: 2rem 0;
 }
 
 .products_carousel_header {
   display: flex;
   width: 100%;
   align-items: center;
+  padding: 0 6rem;
 }
 
 .products_carousel_header button {
@@ -32,10 +33,47 @@
 
 .products_carousel_wrapper {
   padding-top: 1rem;
+  width: 100%;
+}
+
+.swiper {
+  cursor: grab;
+  padding-left: 6rem;
 }
 
 .swiper-slide {
   width: 60vw;
   max-width: 20rem;
-  margin-right: 20px;
+  background-color: var(--color_primary);
+}
+
+.swiperNavPrev,
+.swiperNavNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+  background-color: var(--color_primary_80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color_secondary);
+  border-radius: 50%;
+  border: 1px solid var(--color_secondary_10);
+  backdrop-filter: saturate(180%) blur(2rem);
+  transition: all 0.3s ease;
+}
+.swiperNavPrev {
+  left: 10%;
+}
+.swiperNavNext {
+  right: 10%;
+}
+
+.swiper_button_disabled {
+  opacity: 0;
+  visibility: hidden;
 }

@@ -2,6 +2,7 @@ import style from './SlideShow.module.css'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay } from 'swiper'
+import 'swiper/css/pagination'
 import { Link } from 'react-router-dom'
 
 function SlideShow() {

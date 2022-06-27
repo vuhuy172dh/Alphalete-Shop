@@ -2,6 +2,7 @@
   --color_primary: hsl(0, 0%, 5%);
   --color_primary_80: hsla(0, 0%, 5%, 0.8);
   --color_secondary: hsl(0, 0%, 96%);
+  --color_secondary_10: hsla(0, 0%, 96%, 0.1);
   --color_secondary_20: hsla(0, 0%, 96%, 0.2);
   --color_secondary_50: hsla(0, 0%, 96%, 0.5);
   --color_secondary_40: hsla(0, 0%, 96%, 0.4);
@@ -12,6 +13,7 @@
   --color_primary: hsl(0, 0%, 100%);
   --color_primary_80: hsla(0, 0%, 100%, 0.8);
   --color_secondary: hsl(0, 0%, 5%);
+  --color_secondary_10: hsla(0, 0%, 5%, 0.1);
   --color_secondary_20: hsla(0, 0%, 5%, 0.2);
   --color_secondary_50: hsla(0, 0%, 5%, 0.5);
   --color_secondary_40: hsla(0, 0%, 5%, 0.4);
@@ -32,4 +34,9 @@ body {
 .app {
   background-color: var(--color_primary);
   color: var(--color_secondary);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
 }

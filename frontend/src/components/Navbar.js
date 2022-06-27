@@ -22,6 +22,7 @@ function Navbar() {
             <div className={style.nav_top_wrapper}>
               <div className={style.nav_announcement_bar_container}>
                 <Swiper
+                  loop={true}
                   modules={[Autoplay]}
                   autoplay={{ delay: 3000, disableOnInteraction: false }}
                 >

@@ -7,6 +7,7 @@
   position: relative;
   padding-top: 133%;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .top_container img {
@@ -14,4 +15,5 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 }
