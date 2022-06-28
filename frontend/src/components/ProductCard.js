@@ -5,12 +5,19 @@ function ProductCard(props) {
   return (
     <div className={style.product_card}>
       <div className={style.top_container}>
-        <Link to="/collections/product">
+        <div className={style.product_link}>
           <div className={style.product_images_container}>
-            <img src={props.image} alt={props.name} />
-            <img src={props.image_2} alt={props.name} />
+            <Link to="/collections/product">
+              <img src={props.image} alt={props.name} />
+              <img src={props.image_2} alt={props.name} />
+            </Link>
           </div>
-        </Link>
+          <span>NEW</span>
+        </div>
+        <div className={style.quick_add_container}>
+          <span>QUICK ADD +</span>
+          <div className={style.size_btn_container}></div>
+        </div>
       </div>
       <div className={style.bottom_container}>
         <div className={style.product_info}>
