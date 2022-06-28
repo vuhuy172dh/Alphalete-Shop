@@ -16,7 +16,15 @@ function ProductCard(props) {
         </div>
         <div className={style.quick_add_container}>
           <span>QUICK ADD +</span>
-          <div className={style.size_btn_container}></div>
+          <div className={style.size_btn_container}>
+            <button>XXS</button>
+            <button>XS</button>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+            <button>XXL</button>
+          </div>
         </div>
       </div>
       <div className={style.bottom_container}>
