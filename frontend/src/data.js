@@ -1,29 +1,54 @@
 const data = {
   products: [
     {
-      name: '1',
+      name: 'Amplify Short 4.5"',
       image:
-        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505'
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505',
+      image_2:
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310129_400x.jpg?v=1654661505',
+      numbColor: '11',
+      color: 'black',
+      price: '52.00'
     },
     {
-      name: '2',
+      name: 'Amplify Legging',
       image:
-        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310129_400x.jpg?v=1654661505'
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310129_400x.jpg?v=1654661505',
+      image_2:
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505',
+      numbColor: '11',
+      color: 'black',
+      price: '52.00'
     },
     {
-      name: '3',
+      name: 'Amplify Short 4.5"',
       image:
-        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505'
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505',
+      image_2:
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310129_400x.jpg?v=1654661505',
+      numbColor: '11',
+      color: 'black',
+      price: '52.00'
     },
     {
-      name: '4',
+      name: 'Amplify Legging',
       image:
-        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505'
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505',
+      image_2:
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310129_400x.jpg?v=1654661505',
+      numbColor: '11',
+      color: 'black',
+      price: '52.00'
     },
     {
-      name: '5',
+      name: 'Amplify Short 4.5"',
       image:
-        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505'
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310133_400x.jpg?v=1654661505',
+      image_2:
+        'https://cdn.shopify.com/s/files/1/0667/0133/products/AmplifyRestockMay310129_400x.jpg?v=1654661505',
+      numbColor: '11',
+      color: 'black',
+      price: '52.00'
     }
   ]
 }

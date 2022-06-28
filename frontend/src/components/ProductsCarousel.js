@@ -69,7 +69,14 @@ function ProductsCarousel() {
                   key={`slide-${i}`}
                   className={style['swiper-slide']}
                 >
-                  <ProductCard image={product.image} name={product.name} />
+                  <ProductCard
+                    image={product.image}
+                    image_2={product.image_2}
+                    name={product.name}
+                    color={product.color}
+                    numbColor={product.numbColor}
+                    price={product.price}
+                  />
                 </SwiperSlide>
               ))}
               <div ref={swiperNavPrevRef} className={style.swiperNavPrev}>
