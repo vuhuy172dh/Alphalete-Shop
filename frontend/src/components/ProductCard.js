@@ -1,5 +1,6 @@
 import style from './ProductCard.module.css'
 import { Link } from 'react-router-dom'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 function ProductCard(props) {
   return (
@@ -37,6 +38,19 @@ function ProductCard(props) {
           <div className={style.product_price_info}>
             <span>${props.price}</span>
           </div>
+        </div>
+        <div className={style.colorways_container}>
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={'auto'}
+            className={style.swiper}
+          >
+            {props.images.map((image) => (
+              <SwiperSlide className={style['swiper-slide']}>
+                <img src={image} alt="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>

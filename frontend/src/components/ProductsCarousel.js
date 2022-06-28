@@ -76,6 +76,7 @@ function ProductsCarousel() {
                     color={product.color}
                     numbColor={product.numbColor}
                     price={product.price}
+                    images={product.images}
                   />
                 </SwiperSlide>
               ))}
