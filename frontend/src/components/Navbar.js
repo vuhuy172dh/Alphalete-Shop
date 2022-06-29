@@ -5,21 +5,31 @@ import LinkBtn from './LinkBtn'
 import { Link } from 'react-router-dom'
 import { useState, useRef, useEffect } from 'react'
 import useScrollPosition from '../hooks/useScrollPosition.js'
+import data from '../data'
 
 function Navbar() {
-  const [isShown, setIsShown] = useState(false)
+  const [isMenShown, setIsMenShown] = useState(false)
+  const [isWomenShown, setIsWomenShown] = useState(false)
   const scrollPosition = useScrollPosition()
   console.log(scrollPosition)
+
   const [height, setHeight] = useState(0)
   const ref = useRef(null)
   useEffect(() => {
     setHeight(ref.current.clientHeight)
   }, [])
 
+  const [posterShow, setPosterShow] = useState([false, ''])
+  const { men_posters, women_posters } = data
+  console.log(posterShow)
   return (
     <section className={style.section_navbar}>
       <div
-        className={isShown ? style.nav_backdrop_open : style.nav_backdrop}
+        className={
+          isMenShown || isWomenShown
+            ? style.nav_backdrop_open
+            : style.nav_backdrop
+        }
       ></div>
       <nav className={scrollPosition !== 0 ? style['nav_past_top'] : style.nav}>
         <div className={style.nav_inner}>
@@ -131,8 +141,8 @@ function Navbar() {
             <ul className={style.nav_links_wrapper}>
               <li
                 className={style.link_l1}
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}
+                onMouseEnter={() => setIsMenShown(true)}
+                onMouseLeave={() => setIsMenShown(false)}
               >
                 <LinkBtn
                   link="/collections/mens-new"
@@ -151,7 +161,12 @@ function Navbar() {
                           <span>Tops</span>
                         </h2>
                         <ul className={style.sublink_box}>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, men_posters.stringers])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/mens-stringers"
                               color="inherit"
@@ -164,7 +179,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Stringers</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, men_posters.tank_tops])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/mens-tanks"
                               color="inherit"
@@ -177,7 +197,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Tank Tops</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, men_posters.short_sleeves])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/mens-shirts-tops"
                               color="inherit"
@@ -192,7 +217,12 @@ function Navbar() {
                               </span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, men_posters.jackets_hoodies])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/mens-jackets-hoodies"
                               color="inherit"
@@ -214,7 +244,12 @@ function Navbar() {
                           <span>Bottoms</span>
                         </h2>
                         <ul className={style.sublink_box}>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, men_posters.shorts])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/mens-shorts"
                               color="inherit"
@@ -227,7 +262,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Shorts</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, men_posters.joggers])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/mens-joggers"
                               color="inherit"
@@ -271,7 +311,15 @@ function Navbar() {
                     </ul>
                     <div className={style.link_l1_content_card_men}>
                       <div className={style.link_l1_content_card_wrapper}>
-                        <div className={style.link_l3_content_card}>
+                        <div
+                          className={style.link_l3_content_card}
+                          style={{
+                            visibility:
+                              posterShow[0] === false && isMenShown === true
+                                ? 'visible'
+                                : 'hidden'
+                          }}
+                        >
                           <a
                             href="/collections/mens-best-sellers"
                             style={{
@@ -297,6 +345,17 @@ function Navbar() {
                             />
                           </a>
                         </div>
+                        <div
+                          className={style.men_poster}
+                          style={{
+                            visibility:
+                              posterShow[0] === true && isMenShown === true
+                                ? 'visible'
+                                : 'hidden'
+                          }}
+                        >
+                          <img src={posterShow[1]} alt="" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -304,8 +363,8 @@ function Navbar() {
               </li>
               <li
                 className={style.link_l1}
-                onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}
+                onMouseEnter={() => setIsWomenShown(true)}
+                onMouseLeave={() => setIsWomenShown(false)}
               >
                 <LinkBtn
                   link="/collections/mens-new"
@@ -324,7 +383,12 @@ function Navbar() {
                           <span>Tops</span>
                         </h2>
                         <ul className={style.sublink_box}>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.sports_bras])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-sports-bras"
                               color="inherit"
@@ -337,7 +401,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Sports Bras</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.tank_tops])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-tank-tops"
                               color="inherit"
@@ -350,7 +419,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Tank Tops</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.shirts_crops])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-shirts-crops"
                               color="inherit"
@@ -365,7 +439,12 @@ function Navbar() {
                               </span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.long_sleeves])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-long-sleeves"
                               color="inherit"
@@ -378,7 +457,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Long Sleeves</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.jackets])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-jackets-hoodies"
                               color="inherit"
@@ -400,7 +484,12 @@ function Navbar() {
                           <span>Bottoms</span>
                         </h2>
                         <ul className={style.sublink_box}>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.shorts])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-shorts"
                               color="inherit"
@@ -413,7 +502,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Shorts</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.leggings])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-leggings"
                               color="inherit"
@@ -426,7 +520,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Leggings</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.joggers])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-joggers"
                               color="inherit"
@@ -439,7 +538,12 @@ function Navbar() {
                               <span style={{ opacity: 0.7 }}>Joggers</span>
                             </LinkBtn>
                           </li>
-                          <li>
+                          <li
+                            onMouseEnter={() =>
+                              setPosterShow([true, women_posters.dresses])
+                            }
+                            onMouseLeave={() => setPosterShow([false, ''])}
+                          >
                             <LinkBtn
                               link="/collections/womens-dresses-skirts"
                               color="inherit"
@@ -470,6 +574,55 @@ function Navbar() {
                         </ul>
                       </li>
                     </ul>
+                    <div className={style.link_l1_content_card_men}>
+                      <div className={style.link_l1_content_card_wrapper}>
+                        <div
+                          className={style.link_l3_content_card}
+                          style={{
+                            visibility:
+                              posterShow[0] === false && isWomenShown === true
+                                ? 'visible'
+                                : 'hidden'
+                          }}
+                        >
+                          <a
+                            href="/collections/mens-best-sellers"
+                            style={{
+                              borderRadius: '1.5rem',
+                              overflow: 'hidden'
+                            }}
+                          >
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyJune_13.jpg?crop=center&height=300&v=1654936386&width=250"
+                              alt=""
+                            />
+                          </a>
+                          <a
+                            href="/collections/mens-best-sellers"
+                            style={{
+                              borderRadius: '1.5rem',
+                              overflow: 'hidden'
+                            }}
+                          >
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0667/0133/files/Amplify_06.jpg?crop=center&height=300&v=1653147420&width=250"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                        <div
+                          className={style.men_poster}
+                          style={{
+                            visibility:
+                              posterShow[0] === true && isWomenShown === true
+                                ? 'visible'
+                                : 'hidden'
+                          }}
+                        >
+                          <img src={posterShow[1]} alt="" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -488,9 +641,9 @@ function Navbar() {
             </ul>
           </div>
           <div
-            style={{ height: isShown ? height : 0 }}
+            style={{ height: isMenShown || isWomenShown ? height : 0 }}
             className={
-              isShown
+              isMenShown || isWomenShown
                 ? style.nav_expandable_component_open
                 : style.nav_expandable_component
             }
