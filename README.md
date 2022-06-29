@@ -9,6 +9,7 @@
 <span>I take a website I like (https://alphaleteathletics.com/) to practice my skill. So all things in my project (video, image) come from that website</span>
 
 <h5>Task Lists</h5>
+
 - [x] HomePage Frontend (navbar, slideshow, footer, product carousel): completed
 
 
