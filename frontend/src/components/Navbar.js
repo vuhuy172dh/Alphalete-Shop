@@ -3,13 +3,18 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper'
 import LinkBtn from './LinkBtn'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import useScrollPosition from '../hooks/useScrollPosition.js'
 
 function Navbar() {
   const [isShown, setIsShown] = useState(false)
   const scrollPosition = useScrollPosition()
   console.log(scrollPosition)
+  const [height, setHeight] = useState(0)
+  const ref = useRef(null)
+  useEffect(() => {
+    setHeight(ref.current.clientHeight)
+  }, [])
 
   return (
     <section className={style.section_navbar}>
@@ -138,11 +143,7 @@ function Navbar() {
                 >
                   <span>MEN</span>
                 </LinkBtn>
-                <div
-                  className={style.link_l1_container}
-                  onMouseEnter={() => setIsShown(true)}
-                  onMouseLeave={() => setIsShown(false)}
-                >
+                <div className={style.link_l1_container} ref={ref}>
                   <div className={style.link_l1_inner_container}>
                     <ul className={style.link_l1_nested_links_wrapper}>
                       <li className={style.link_l2}>
@@ -268,6 +269,36 @@ function Navbar() {
                         </ul>
                       </li>
                     </ul>
+                    <div className={style.link_l1_content_card_men}>
+                      <div className={style.link_l1_content_card_wrapper}>
+                        <div className={style.link_l3_content_card}>
+                          <a
+                            href="/collections/mens-best-sellers"
+                            style={{
+                              borderRadius: '1.5rem',
+                              overflow: 'hidden'
+                            }}
+                          >
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0667/0133/files/Elements_85.jpg?crop=center&height=300&v=1648056105&width=250"
+                              alt=""
+                            />
+                          </a>
+                          <a
+                            href="/collections/mens-best-sellers"
+                            style={{
+                              borderRadius: '1.5rem',
+                              overflow: 'hidden'
+                            }}
+                          >
+                            <img
+                              src="https://cdn.shopify.com/s/files/1/0667/0133/files/Elements_08.jpg?crop=center&height=300&v=1651867703&width=250"
+                              alt=""
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </li>
@@ -285,11 +316,7 @@ function Navbar() {
                 >
                   <span>WOMEN</span>
                 </LinkBtn>
-                <div
-                  className={style.link_l1_container}
-                  onMouseEnter={() => setIsShown(true)}
-                  onMouseLeave={() => setIsShown(false)}
-                >
+                <div className={style.link_l1_container}>
                   <div className={style.link_l1_inner_container}>
                     <ul className={style.link_l1_nested_links_wrapper}>
                       <li className={style.link_l2}>
@@ -461,6 +488,7 @@ function Navbar() {
             </ul>
           </div>
           <div
+            style={{ height: isShown ? height : 0 }}
             className={
               isShown
                 ? style.nav_expandable_component_open
