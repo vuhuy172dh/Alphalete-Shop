@@ -1,7 +1,7 @@
 import style from './SlideShow.module.css'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay } from 'swiper'
+import { Pagination, Autoplay, EffectFade } from 'swiper'
 import 'swiper/css/pagination'
 import { Link } from 'react-router-dom'
 
@@ -11,13 +11,13 @@ function SlideShow() {
       <section className={style.section_slideshow}>
         <div className={style.slideshow_container}>
           <Swiper
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay, Pagination, EffectFade]}
+            effect={'fade'}
             style={{ cursor: 'grab' }}
             autoplay={{ delay: 15000, disableOnInteraction: false }}
             pagination={{
               type: 'bullets'
             }}
-            wrapperTag="div"
             className={style.swiper}
           >
             <SwiperSlide className={style['swiper-slide']}>
@@ -30,7 +30,7 @@ function SlideShow() {
                     muted={true}
                     poster="//cdn.shopify.com/s/files/1/0667/0133/files/E527B7F5-53F8-4941-8F3A-AC8079FD6ECC_1400x.jpg?v=1655155189"
                     playsInline={true}
-                  ></video>
+                  />
                 </div>
                 <div className={style.cta}>
                   <h2 className={style.cta_title}>MEN'S</h2>
@@ -63,9 +63,9 @@ function SlideShow() {
                   />
                 </div>
                 <div className={style.cta}>
-                  <h2 className={style.cta_title}>MEN'S</h2>
+                  <h2 className={style.cta_title}>OUR FAVORITES</h2>
                   <p className={style.cta_desc}>
-                    The next generation of Alphalete sportswear
+                    Learn More. Dream More. Be More.
                   </p>
                   <div className={style.cta_btn_container}>
                     <Link
