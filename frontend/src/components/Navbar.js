@@ -375,7 +375,7 @@ function Navbar() {
                 >
                   <span>WOMEN</span>
                 </LinkBtn>
-                <div className={style.link_l1_container}>
+                <div className={style.link_l1_container} ref={ref}>
                   <div className={style.link_l1_inner_container}>
                     <ul className={style.link_l1_nested_links_wrapper}>
                       <li className={style.link_l2}>
@@ -636,6 +636,11 @@ function Navbar() {
               <li className={style.nav_minicart}>
                 <button className={style.nav_minicart_btn}>
                   <i className="fa-solid fa-cart-shopping" />
+                </button>
+              </li>
+              <li className={style.nav_bars}>
+                <button className={style.nav_bars_btn}>
+                  <i className="fa-solid fa-bars" />
                 </button>
               </li>
             </ul>
