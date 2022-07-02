@@ -6,22 +6,27 @@ import { Link } from 'react-router-dom'
 import { useState, useRef, useEffect } from 'react'
 import useScrollPosition from '../hooks/useScrollPosition.js'
 import data from '../data'
+import useWindowSize from '../hooks/useWindowSize'
 
-function Navbar() {
+function Navbar(props) {
+  const size = useWindowSize()
   const [isMenShown, setIsMenShown] = useState(false)
   const [isWomenShown, setIsWomenShown] = useState(false)
   const scrollPosition = useScrollPosition()
-  console.log(scrollPosition)
 
+  //take height to set expandable navbar when hover over men and women in navbar
   const [height, setHeight] = useState(0)
   const ref = useRef(null)
   useEffect(() => {
     setHeight(ref.current.clientHeight)
-  }, [])
+  }, [
+    size.width
+  ]) /* update height (in case, access web in window size < 800px (responsible) ,
+  and then resize window to full width ( > 800px))*/
 
+  //to show poster image corresponding to link btn when hovering ( in Navbar when hover men, women)
   const [posterShow, setPosterShow] = useState([false, ''])
   const { men_posters, women_posters } = data
-  console.log(posterShow)
   return (
     <section className={style.section_navbar}>
       <div
@@ -639,7 +644,10 @@ function Navbar() {
                 </button>
               </li>
               <li className={style.nav_bars}>
-                <button className={style.nav_bars_btn}>
+                <button
+                  className={style.nav_bars_btn}
+                  onClick={props.handleMenuClick}
+                >
                   <i className="fa-solid fa-bars" />
                 </button>
               </li>
