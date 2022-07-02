@@ -8,7 +8,9 @@
   justify-content: center;
   align-items: flex-end;
   z-index: 25;
-  visibility: hidden;
+  transform: translateY(100%);
+  opacity: 0.5;
+  transition: transform 0.5s ease;
 }
 
 .navdrawer-open {
@@ -21,7 +23,9 @@
   justify-content: center;
   align-items: flex-end;
   z-index: 25;
-  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.5s ease;
 }
 
 .navdrawer-backdrop {
@@ -62,4 +66,84 @@
   background-color: var(--color_primary_80);
   backdrop-filter: saturate(180%) blur(3rem);
   z-index: 30;
+}
+
+.navdrawer-header {
+  width: 100%;
+  padding: 0 3rem;
+  position: sticky;
+  top: 0;
+}
+
+.header-button {
+  list-style: none;
+  margin: 0;
+  padding: 0rem 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--color_secondary_20);
+}
+
+.header-button > li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.men-btn,
+.women-btn {
+  position: relative;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color_secondary_50);
+  line-height: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.men-btn::after,
+.women-btn::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color_secondary_50);
+  transform: scale(0, 1);
+  transform-origin: 100% 100%;
+  transition: transform 0.5s ease;
+}
+
+.men-btn-active,
+.women-btn-active {
+  position: relative;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--color_secondary);
+  line-height: 100%;
+  height: 100%;
+  padding: 1rem 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.men-btn-active::after,
+.women-btn-active::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color_secondary);
+  transform: scale(1, 1);
+  transform-origin: 0 100%;
+  transition: transform 0.5s ease;
 }
