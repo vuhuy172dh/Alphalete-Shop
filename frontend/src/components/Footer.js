@@ -118,6 +118,7 @@ function Footer() {
               <span>SIGN UP</span>
             </button>
           </form>
+          <hr />
           <ul className={style.social_media_container}>
             <li className={style.social_media}>
               <i className="fa-brands fa-instagram" />
