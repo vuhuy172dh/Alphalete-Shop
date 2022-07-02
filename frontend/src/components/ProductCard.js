@@ -27,6 +27,9 @@ function ProductCard(props) {
             <button>XXL</button>
           </div>
         </div>
+        <div className={style.responsive_quick_add_container}>
+          <i className="fa-solid fa-circle-plus" />
+        </div>
       </div>
       <div className={style.bottom_container}>
         <div className={style.product_info}>

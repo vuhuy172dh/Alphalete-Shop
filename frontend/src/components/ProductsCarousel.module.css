@@ -77,3 +77,19 @@
   opacity: 0;
   visibility: hidden;
 }
+
+@media screen and (max-width: 800px) {
+  .products_carousel_header {
+    padding: 0 1.5rem;
+  }
+
+  .swiper {
+    padding-left: 1.5rem;
+  }
+
+  .swiper-slide {
+    width: 60vw;
+    max-width: 14rem;
+    background-color: var(--color_primary);
+  }
+}
