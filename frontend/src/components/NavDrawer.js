@@ -1,11 +1,17 @@
 import style from './NavDrawer.module.css'
 import LinkBtn from './LinkBtn'
 import useWindowSize from '../hooks/useWindowSize'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { ThemeContext } from '../theme/themes'
 
 function NavDrawer(props) {
   const size = useWindowSize()
   const [btnClicked, setBtnClicked] = useState(false)
+  const { theme, setTheme } = useContext(ThemeContext)
+
+  const handleTheme = () => {
+    setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'))
+  }
 
   function clickMenBtn() {
     setBtnClicked(false)
@@ -207,7 +213,178 @@ function NavDrawer(props) {
                 </div>
               </div>
             </div>
-            <div id="women-drawer-container"></div>
+            <div
+              id="women-drawer-container"
+              style={{ display: btnClicked === true ? 'flex' : 'none' }}
+              className={style['link-l1-container']}
+            >
+              <ul className={style['link-l1-wrapper']}>
+                <li>
+                  <h2>
+                    <span>Tops</span>
+                  </h2>
+                  <ul className={style['link-l2-wrapper']}>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-stringers"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Sports Bras</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-tanks"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Tank Tops</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-shirts-tops"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Shirts & Crops</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-jackets-hoodies"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Long Sleeves</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-jackets-hoodies"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Jackets & Hoodies</span>
+                      </LinkBtn>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h2>
+                    <span>Bottoms</span>
+                  </h2>
+                  <ul className={style['link-l2-wrapper']}>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-shorts"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Shorts</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-joggers"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Leggings</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-boardshorts"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Joggers</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-base-layers"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Dresses & Skirts</span>
+                      </LinkBtn>
+                    </li>
+                    <li>
+                      <LinkBtn
+                        link="/collections/mens-base-layers"
+                        color="inherit"
+                        opacity="0.7"
+                        fontweight="600"
+                        fontsize="0.8rem"
+                        paddingtop="2px"
+                        paddingbottom="2px"
+                      >
+                        <span style={{ opacity: 0.7 }}>Underwear</span>
+                      </LinkBtn>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div className={style['link-l1-poster']}>
+                <div className={style['link-l1-poster-inner']}>
+                  <div className={style['poster-img']}>
+                    <div className={style['poster-img-wrapper']}>
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0667/0133/files/AmplifyJune_13.jpg?crop=center&height=300&v=1654936386&width=250"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div className={style['poster-img']}>
+                    <div className={style['poster-img-wrapper']}>
+                      <img
+                        src="https://cdn.shopify.com/s/files/1/0667/0133/files/Amplify_06.jpg?crop=center&height=300&v=1653147420&width=250"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className={style['navdrawer-footer']}>
             <div className={style['info-container']}>
@@ -250,7 +427,34 @@ function NavDrawer(props) {
                 </li>
               </ul>
             </div>
-            <div className={style['social-container']}></div>
+            <ul className={style['social-media-container']}>
+              <li className={style.social_media}>
+                <i className="fa-brands fa-instagram" />
+              </li>
+              <li className={style.social_media}>
+                <i className="fa-brands fa-tiktok" />
+              </li>
+              <li className={style.social_media}>
+                <i className="fa-brands fa-twitter" />
+              </li>
+              <li className={style.social_media}>
+                <i className="fa-brands fa-facebook-f" />
+              </li>
+              <li className={style.social_media}>
+                <i className="fa-brands fa-youtube" />
+              </li>
+              <li>
+                <button onClick={handleTheme}>
+                  <i
+                    className={
+                      theme === 'dark'
+                        ? 'fa-solid fa-toggle-off'
+                        : 'fa-solid fa-toggle-on'
+                    }
+                  />
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
