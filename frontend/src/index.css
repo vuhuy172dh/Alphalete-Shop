@@ -44,7 +44,16 @@ body {
   color: var(--color_secondary);
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: white !important;
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--color_primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color_secondary_20);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color_secondary_50);
 }
