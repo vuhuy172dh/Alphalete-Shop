@@ -27,7 +27,7 @@
 .btn > span {
   width: 100%;
   height: var(--height-span);
-  background-color: hsla(0, 0%, 96%, 1);
+  background-color: var(--color_secondary);
   transform-origin: 0 50%;
   transition: all 0.3s ease;
   border-radius: 10px;
