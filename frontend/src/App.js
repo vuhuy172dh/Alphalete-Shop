@@ -1,6 +1,7 @@
 import './index.css'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
+import LogInPage from './pages/LogInPage'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { useContext, useState } from 'react'
@@ -27,6 +28,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/account/login" element={<LogInPage />} />
         </Routes>
       </main>
       <Footer />

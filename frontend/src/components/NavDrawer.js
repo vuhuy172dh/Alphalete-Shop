@@ -390,7 +390,7 @@ function NavDrawer(props) {
             <div className={style['info-container']}>
               <ul className={style['info-list']}>
                 <li>
-                  <a href="/login" className={style['info-btn']}>
+                  <a href="/account/login" className={style['info-btn']}>
                     <i className="fa-solid fa-circle-user" />
                     <span>Sign In</span>
                   </a>
