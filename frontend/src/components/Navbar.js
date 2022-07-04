@@ -7,11 +7,13 @@ import { useState, useRef, useEffect } from 'react'
 import useScrollPosition from '../hooks/useScrollPosition.js'
 import data from '../data'
 import useWindowSize from '../hooks/useWindowSize'
+import HamburgerMenu from './HamburgerMenu'
 
 function Navbar(props) {
   const size = useWindowSize()
   const [isMenShown, setIsMenShown] = useState(false)
   const [isWomenShown, setIsWomenShown] = useState(false)
+  const [hamburgerClick, setHamburgerClick] = useState(false)
   const scrollPosition = useScrollPosition()
 
   //take height to set expandable navbar when hover over men and women in navbar
@@ -27,6 +29,10 @@ function Navbar(props) {
   //to show poster image corresponding to link btn when hovering ( in Navbar when hover men, women)
   const [posterShow, setPosterShow] = useState([false, ''])
   const { men_posters, women_posters } = data
+
+  const handleHamburgerClick = () => {
+    setHamburgerClick(!hamburgerClick)
+  }
   return (
     <section className={style.section_navbar}>
       <div
@@ -644,12 +650,14 @@ function Navbar(props) {
                 </button>
               </li>
               <li className={style.nav_bars}>
-                <button
+                <div
                   className={style.nav_bars_btn}
                   onClick={props.handleMenuClick}
                 >
-                  <i className="fa-solid fa-bars" />
-                </button>
+                  <HamburgerMenu
+                    isClicked={props.isMenuClicked}
+                  ></HamburgerMenu>
+                </div>
               </li>
             </ul>
           </div>

@@ -19,7 +19,10 @@ function App() {
   return (
     <div className="app" data-theme={theme}>
       <header>
-        <Navbar handleMenuClick={handleMenuClick} />
+        <Navbar
+          handleMenuClick={handleMenuClick}
+          isMenuClicked={isMenuClicked}
+        />
         <NavDrawer
           isMenuClicked={isMenuClicked}
           handleMenuClick={handleMenuClick}

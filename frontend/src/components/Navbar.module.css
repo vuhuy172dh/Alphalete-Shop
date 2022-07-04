@@ -383,8 +383,8 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 40px;
+  width: 40px;
   border-radius: 9999px;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -448,6 +448,8 @@
   }
 
   .nav_bars_btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
