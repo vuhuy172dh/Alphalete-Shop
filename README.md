@@ -11,6 +11,8 @@
 <h5>Task Lists</h5>
 
 - [x] HomePage Frontend (navbar, slideshow, footer, product carousel): completed
+- [x] SignInPage Frontend: completed
+- [x] Responsive Web App: completed
 
 
 <h3>This is an uncompleted project</h3>
